@@ -1,0 +1,21 @@
+
+version: 2
+
+sources:
+  - name: fabric_data
+    database: raw_bronze_lakehouse  
+    schema: dbo  
+    tables:
+      - name: raw_customers
+
+models:
+    - name: int_customers
+      description: "Raw ustomer data from data lake"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: name
+            description: "The name"
