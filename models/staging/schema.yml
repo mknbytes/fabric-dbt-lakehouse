@@ -7,6 +7,7 @@ sources:
     schema: dbo  
     tables:
       - name: raw_customers
+      - name: raw_customers23
 
 models:
     - name: int_customers
